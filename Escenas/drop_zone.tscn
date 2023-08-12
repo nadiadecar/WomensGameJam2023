@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://db35o1uhxnw3h"]
+
+[ext_resource type="Script" path="res://WomensGameJam2023/Scripts/drope_zone.gd" id="1_ycsta"]
+
+[node name="DropZone" type="Marker2D" groups=["zonas"]]
+script = ExtResource("1_ycsta")
