@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fqyu6ydubqv3"
-path="res://.godot/imported/ArribaIzquierda.png-947ca165c83991fb92f37cb722b04f22.ctex"
+path="res://.godot/imported/ArribaIzquierda.png-52473c32c4dbe7435991e356802a89e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WomensGameJam2023/Assets/ArribaIzquierda.png"
-dest_files=["res://.godot/imported/ArribaIzquierda.png-947ca165c83991fb92f37cb722b04f22.ctex"]
+source_file="res://Assets/ArribaIzquierda.png"
+dest_files=["res://.godot/imported/ArribaIzquierda.png-52473c32c4dbe7435991e356802a89e4.ctex"]
 
 [params]
 

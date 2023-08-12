@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6jhnhrexaplr"
-path="res://.godot/imported/AbajoDerecha.png-9656e580414a6caa39e6278e85cf0a91.ctex"
+path="res://.godot/imported/AbajoDerecha.png-9cf4bdb201981d2f18e75e3d55fba968.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WomensGameJam2023/Assets/AbajoDerecha.png"
-dest_files=["res://.godot/imported/AbajoDerecha.png-9656e580414a6caa39e6278e85cf0a91.ctex"]
+source_file="res://Assets/AbajoDerecha.png"
+dest_files=["res://.godot/imported/AbajoDerecha.png-9cf4bdb201981d2f18e75e3d55fba968.ctex"]
 
 [params]
 
