@@ -1,8 +1,152 @@
-[gd_scene load_steps=2 format=3 uid="uid://khioykstqlgd"]
+[gd_scene load_steps=7 format=3 uid="uid://khioykstqlgd"]
 
+[ext_resource type="Script" path="res://Scripts/celular.gd" id="1_8ekuj"]
 [ext_resource type="Texture2D" uid="uid://bb72lg8xcicwo" path="res://Assets/margaritas-celular/Celular.png" id="1_mxoyn"]
+[ext_resource type="Theme" uid="uid://corxenjhid5p0" path="res://Assets/general.tres" id="3_uee50"]
+[ext_resource type="Texture2D" uid="uid://c3fox64tr7pgh" path="res://Assets/burbujas-dialogo/2 verde mediano.png" id="4_5c5p2"]
+[ext_resource type="Theme" uid="uid://c3wx34gb6abnd" path="res://Assets/dialogos.tres" id="5_t6j0l"]
+[ext_resource type="Texture2D" uid="uid://do41y4pv0q558" path="res://Assets/burbujas-dialogo/2 rosa mediano.png" id="6_7ktax"]
 
 [node name="celular" type="Node2D"]
+script = ExtResource("1_8ekuj")
 
 [node name="Celular" type="Sprite2D" parent="."]
 texture = ExtResource("1_mxoyn")
+
+[node name="Destinatario" type="Label" parent="."]
+offset_left = -208.0
+offset_top = -354.0
+offset_right = -140.0
+offset_bottom = -314.0
+theme = ExtResource("3_uee50")
+text = "NOA"
+
+[node name="Dialogo1" type="Node2D" parent="."]
+visible = false
+position = Vector2(-62, -213)
+
+[node name="2VerdeMediano" type="Sprite2D" parent="Dialogo1"]
+scale = Vector2(0.7, 0.8)
+texture = ExtResource("4_5c5p2")
+
+[node name="Label" type="Label" parent="Dialogo1"]
+offset_left = -132.0
+offset_top = -41.0
+offset_right = 140.0
+offset_bottom = 28.0
+theme = ExtResource("5_t6j0l")
+text = "Che me re copó tu onda. Gracias por la birra. "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Dialogo3" type="Node2D" parent="."]
+visible = false
+position = Vector2(-68, -23)
+
+[node name="2VerdeMediano" type="Sprite2D" parent="Dialogo3"]
+scale = Vector2(0.7, 0.8)
+texture = ExtResource("4_5c5p2")
+
+[node name="2VerdeMediano2" type="Sprite2D" parent="Dialogo3"]
+position = Vector2(61, 0)
+scale = Vector2(0.7, 0.8)
+texture = ExtResource("4_5c5p2")
+
+[node name="Label" type="Label" parent="Dialogo3"]
+offset_left = -132.0
+offset_top = -64.0
+offset_right = 227.0
+offset_bottom = 49.0
+theme = ExtResource("5_t6j0l")
+text = "¡Totalmente! Ahí coincidimos. Pero me corresponde a mí invitarte."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Dialogo5" type="Node2D" parent="."]
+visible = false
+position = Vector2(-67, 130)
+
+[node name="2VerdeMediano" type="Sprite2D" parent="Dialogo5"]
+scale = Vector2(0.7, 0.8)
+texture = ExtResource("4_5c5p2")
+
+[node name="2VerdeMediano2" type="Sprite2D" parent="Dialogo5"]
+position = Vector2(30, 0)
+scale = Vector2(0.7, 0.8)
+texture = ExtResource("4_5c5p2")
+
+[node name="Label" type="Label" parent="Dialogo5"]
+offset_left = -130.0
+offset_top = -59.0
+offset_right = 174.0
+offset_bottom = 54.0
+theme = ExtResource("5_t6j0l")
+text = "En La Fortaleza el jueves van a pasar El Bromas. ¿La viste?
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Dialogo2" type="Node2D" parent="."]
+visible = false
+position = Vector2(77, -121)
+
+[node name="2RosaMediano" type="Sprite2D" parent="Dialogo2"]
+rotation = 3.14159
+scale = Vector2(0.7, -0.8)
+texture = ExtResource("6_7ktax")
+
+[node name="Label" type="Label" parent="Dialogo2"]
+offset_left = -146.0
+offset_top = -53.0
+offset_right = 138.0
+offset_bottom = 41.0
+theme = ExtResource("5_t6j0l")
+text = "No es nada, qué bueno que a lxs dos nos guste la IPA."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Dialogo4" type="Node2D" parent="."]
+visible = false
+position = Vector2(77, 53)
+
+[node name="2RosaMediano" type="Sprite2D" parent="Dialogo4"]
+position = Vector2(0, -8)
+rotation = 3.14159
+scale = Vector2(0.7, -0.4)
+texture = ExtResource("6_7ktax")
+
+[node name="Label" type="Label" parent="Dialogo4"]
+offset_left = -146.0
+offset_top = -53.0
+offset_right = 138.0
+offset_bottom = 41.0
+theme = ExtResource("5_t6j0l")
+text = "No hace falta, en serio. "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Dialogo6" type="Node2D" parent="."]
+visible = false
+position = Vector2(77, 235)
+
+[node name="2RosaMediano" type="Sprite2D" parent="Dialogo6"]
+position = Vector2(0, -8)
+rotation = 3.14159
+scale = Vector2(0.7, -0.8)
+texture = ExtResource("6_7ktax")
+
+[node name="Label" type="Label" parent="Dialogo6"]
+offset_left = -146.0
+offset_top = -53.0
+offset_right = 138.0
+offset_bottom = 41.0
+theme = ExtResource("5_t6j0l")
+text = "No, nunca. Vamos, si querés. "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

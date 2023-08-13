@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://drmuklynhek0c"]
+[gd_scene load_steps=6 format=3 uid="uid://drmuklynhek0c"]
 
+[ext_resource type="Script" path="res://Scripts/entrada/dialogo_entrada.gd" id="1_3rmhx"]
 [ext_resource type="Texture2D" uid="uid://c3fox64tr7pgh" path="res://Assets/burbujas-dialogo/2 verde mediano.png" id="1_pke0m"]
 [ext_resource type="Theme" uid="uid://c3wx34gb6abnd" path="res://Assets/dialogos.tres" id="2_rf2b1"]
 [ext_resource type="Texture2D" uid="uid://do41y4pv0q558" path="res://Assets/burbujas-dialogo/2 rosa mediano.png" id="3_6ugso"]
@@ -14,8 +15,10 @@ offset_left = 946.0
 offset_right = 3.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3rmhx")
 
 [node name="1" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(521, 110)
 texture = ExtResource("1_pke0m")
 
@@ -25,13 +28,14 @@ offset_top = -57.0
 offset_right = 205.0
 offset_bottom = 43.0
 theme = ExtResource("2_rf2b1")
-text = "Qué linda la chica con remera de Sailor Moon que está en la barra"
+text = "Noa: Qué linda la chica con remera de Sailor Moon que está en la barra"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(721, 254)
 scale = Vector2(-1, 1)
 texture = ExtResource("3_6ugso")
@@ -43,13 +47,14 @@ offset_right = 607.0
 offset_bottom = 49.0
 scale = Vector2(-1, 1)
 theme = ExtResource("2_rf2b1")
-text = "Ese pibe que es igual a Tom Holland me viene mirando hace rato. Está bueno"
+text = "Jade: Ese pibe que es igual a Tom Holland me viene mirando hace rato. Está bueno"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(521, 419)
 texture = ExtResource("1_pke0m")
 
@@ -59,13 +64,14 @@ offset_top = -54.0
 offset_right = 205.0
 offset_bottom = 46.0
 theme = ExtResource("2_rf2b1")
-text = "Me podría acercar a la barra y hablarle, pero no sé qué decirle"
+text = "Noa: Me podría acercar a la barra y hablarle, pero no sé qué decirle"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="4" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(721, 585)
 scale = Vector2(-1, 1)
 texture = ExtResource("3_6ugso")
@@ -77,28 +83,30 @@ offset_right = 606.0
 offset_bottom = 49.0
 scale = Vector2(-1, 1)
 theme = ExtResource("2_rf2b1")
-text = "Ya fue voy y lo invito a una birra"
+text = "Jade: Ya fue voy y lo invito a una birra"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="5" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(462, 718)
 scale = Vector2(-1, 1)
 texture = ExtResource("4_2sa74")
 
 [node name="Noa3" type="Label" parent="5"]
-offset_left = 66.0
+offset_left = 86.0
 offset_top = -24.0
-offset_right = 206.0
+offset_right = 274.0
 offset_bottom = 20.0
 scale = Vector2(-1, 1)
 theme = ExtResource("2_rf2b1")
-text = "Huy, ahí viene"
+text = "Noa: Huy, ahí viene"
 metadata/_edit_use_anchors_ = true
 
 [node name="6" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(721, 858)
 scale = Vector2(-1, 1)
 texture = ExtResource("3_6ugso")
@@ -110,7 +118,7 @@ offset_right = 607.0
 offset_bottom = 51.0
 scale = Vector2(-1, 1)
 theme = ExtResource("2_rf2b1")
-text = "¡Hola! Elegí: ¿cerveza rubia, negra o roja?"
+text = "Jade: ¡Hola! Elegí: ¿cerveza rubia, negra o roja?"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

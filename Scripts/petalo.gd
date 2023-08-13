@@ -3,7 +3,7 @@ extends Node2D
 
 var seleccionado = false
 var cae = false
-
+signal quita_petalo
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
@@ -21,5 +21,6 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed and seleccionado: 
 			seleccionado = false 
 			cae = true
+			emit_signal("quita_petalo")
 				
 			

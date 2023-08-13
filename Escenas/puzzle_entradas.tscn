@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://edvuqkvaoxsm"]
+[gd_scene load_steps=19 format=3 uid="uid://edvuqkvaoxsm"]
 
 [ext_resource type="Script" path="res://Scripts/entrada/escena_entradas.gd" id="1_8h802"]
 [ext_resource type="Texture2D" uid="uid://c8en05ge8mna3" path="res://Assets/puzzle-entrada/Fondo Escena 1.png" id="1_aaefl"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://x7qblsv51frf" path="res://Escenas/entradas/entrada_5.tscn" id="14_4m1mp"]
 [ext_resource type="PackedScene" uid="uid://drmuklynhek0c" path="res://Escenas/entradas/dialogo_entrada.tscn" id="16_5i3af"]
 [ext_resource type="Theme" uid="uid://corxenjhid5p0" path="res://Assets/general.tres" id="17_58phh"]
+[ext_resource type="Script" path="res://Escenas/Timer.gd" id="18_xh46r"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_8h802")
@@ -84,5 +85,8 @@ offset_bottom = 1031.0
 theme = ExtResource("17_58phh")
 disabled = true
 text = "  CONTINUAR  "
+
+[node name="Timer" type="Timer" parent="."]
+script = ExtResource("18_xh46r")
 
 [connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]
