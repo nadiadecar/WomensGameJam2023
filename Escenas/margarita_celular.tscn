@@ -47,10 +47,10 @@ texture = ExtResource("3_1c5ra")
 
 [node name="continuar" type="Button" parent="."]
 visible = false
-offset_left = 1367.0
-offset_top = 1008.0
-offset_right = 1646.0
-offset_bottom = 1068.0
+offset_left = 815.0
+offset_top = 876.0
+offset_right = 1094.0
+offset_bottom = 936.0
 theme = ExtResource("6_pc1fa")
 disabled = true
 text = "  CONTINUAR  "

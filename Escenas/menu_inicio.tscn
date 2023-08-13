@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://b74pwkeumms5a"]
+
+[ext_resource type="Texture2D" uid="uid://ocxle2tahyql" path="res://Assets/carteles/Inicio-Penca.jpg" id="1_fg0gn"]
+[ext_resource type="Script" path="res://Scripts/menu_inicio.gd" id="1_xj775"]
+[ext_resource type="Theme" uid="uid://b10eb7ntl3qwe" path="res://Assets/botones-menus.tres" id="2_lqu31"]
+[ext_resource type="Theme" uid="uid://bl3t0ohcay44f" path="res://Assets/boton-redondo-menui.tres" id="3_rbqex"]
+
+[node name="MenuInicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xj775")
+
+[node name="Inicio-penca" type="Sprite2D" parent="."]
+position = Vector2(963.034, 544.75)
+scale = Vector2(1.51255, 1.51255)
+texture = ExtResource("1_fg0gn")
+
+[node name="play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 874.0
+offset_top = 372.0
+offset_right = 1061.0
+offset_bottom = 563.0
+theme = ExtResource("3_rbqex")
+
+[node name="creditos" type="Button" parent="."]
+layout_mode = 0
+offset_left = 796.0
+offset_top = 619.0
+offset_right = 1116.0
+offset_bottom = 669.0
+theme = ExtResource("2_lqu31")
+
+[node name="salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 700.0
+offset_right = 1125.0
+offset_bottom = 750.0
+theme = ExtResource("2_lqu31")
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]

@@ -78,10 +78,10 @@ offset_bottom = 18.0
 
 [node name="continuar" type="Button" parent="."]
 visible = false
-offset_left = 1393.0
-offset_top = 971.0
-offset_right = 1672.0
-offset_bottom = 1031.0
+offset_left = 854.0
+offset_top = 896.0
+offset_right = 1133.0
+offset_bottom = 956.0
 theme = ExtResource("17_58phh")
 disabled = true
 text = "  CONTINUAR  "

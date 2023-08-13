@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="WGJ"
-run/main_scene="res://WomensGameJam2023/Escenas/entradas.tscn"
+run/main_scene="res://Escenas/menu_inicio.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/puzzle-entrada/4.png"
 
 [display]
 

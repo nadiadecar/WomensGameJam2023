@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://frro8w5pvbh4"]
+[gd_scene load_steps=14 format=3 uid="uid://frro8w5pvbh4"]
 
 [ext_resource type="Texture2D" uid="uid://dck32aqcscple" path="res://Assets/cajas-cosas/Fondo Escena 3.png" id="1_0s5t4"]
 [ext_resource type="Script" path="res://Scripts/cosas_cajas_escena.gd" id="1_pkemu"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://ecgfw7g0xh4j" path="res://Escenas/objetos-cajas/planta.tscn" id="8_nedrg"]
 [ext_resource type="PackedScene" uid="uid://bxospbnl0m664" path="res://Escenas/objetos-cajas/totoro.tscn" id="9_arntd"]
 [ext_resource type="Theme" uid="uid://corxenjhid5p0" path="res://Assets/general.tres" id="11_bxx4o"]
+[ext_resource type="Texture2D" uid="uid://c0rdqpj2ey1sa" path="res://Assets/burbujas-dialogo/1 rosa grande.png" id="12_pretm"]
+[ext_resource type="Texture2D" uid="uid://cafg0sp4c3vey" path="res://Assets/burbujas-dialogo/1 verde grande.png" id="13_y10y5"]
 
 [node name="cosas_cajas" type="Node2D"]
 scale = Vector2(1.01389, 1)
@@ -56,11 +58,26 @@ metadata/tipo = "planta"
 position = Vector2(163.726, 181)
 metadata/tipo = "totoro"
 
+[node name="BurbujaJade" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(0.823529, 0.819608, 1, 1)
+position = Vector2(510.904, 870)
+scale = Vector2(1.4, 2)
+texture = ExtResource("12_pretm")
+
+[node name="BurbujaNoa" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(0.517647, 0.898039, 0.776471, 1)
+position = Vector2(1557.37, 872)
+rotation = 3.14159
+scale = Vector2(1.4, -2)
+texture = ExtResource("13_y10y5")
+
 [node name="TextoJade" type="Label" parent="."]
-offset_left = 200.0
-offset_top = 750.0
-offset_right = 810.0
-offset_bottom = 1019.0
+offset_left = 235.726
+offset_top = 740.0
+offset_right = 802.726
+offset_bottom = 1009.0
 size_flags_horizontal = 4
 theme = ExtResource("11_bxx4o")
 horizontal_alignment = 1
@@ -68,12 +85,26 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="TextoNoa" type="Label" parent="."]
-offset_left = 1250.0
-offset_top = 750.0
-offset_right = 1860.0
-offset_bottom = 1019.0
+offset_left = 1255.0
+offset_top = 740.0
+offset_right = 1830.0
+offset_bottom = 1009.0
 size_flags_horizontal = 4
 theme = ExtResource("11_bxx4o")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="continuar" type="Button" parent="."]
+visible = false
+offset_left = 810.739
+offset_top = 853.0
+offset_right = 1089.74
+offset_bottom = 913.0
+theme = ExtResource("11_bxx4o")
+disabled = true
+text = "  CONTINUAR  "
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]

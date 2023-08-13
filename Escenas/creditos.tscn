@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2p1evbonnct"]
+
+[ext_resource type="Texture2D" uid="uid://bwwh7dv3wnckf" path="res://Assets/carteles/Creditos.png" id="1_mx533"]
+
+[node name="creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Creditos" type="Sprite2D" parent="."]
+position = Vector2(963, 528)
+texture = ExtResource("1_mx533")
