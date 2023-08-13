@@ -55,4 +55,6 @@ theme = ExtResource("6_pc1fa")
 disabled = true
 text = "  CONTINUAR  "
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]
