@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cltud731uypp0"]
+
+[ext_resource type="Script" path="res://Scripts/objetos-cajas.gd" id="1_upjk5"]
+[ext_resource type="Texture2D" uid="uid://dklx052qrdywv" path="res://Assets/cajas-cosas/Afiche peli.png" id="2_yp0th"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f7tx"]
+size = Vector2(178, 247)
+
+[node name="afiche" type="Node2D"]
+script = ExtResource("1_upjk5")
+
+[node name="AfichePeli" type="Sprite2D" parent="."]
+texture = ExtResource("2_yp0th")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_0f7tx")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

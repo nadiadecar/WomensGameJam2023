@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwf2rhalbgbfw"
-path="res://.godot/imported/Petalo solo.png-9798a7cbe6effa47e600f5d7285d9376.ctex"
+uid="uid://xwsu30bqii3k"
+path="res://.godot/imported/Caja.png-85323040c7d31cc581d1ff7ab33ebe19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Petalo solo.png"
-dest_files=["res://.godot/imported/Petalo solo.png-9798a7cbe6effa47e600f5d7285d9376.ctex"]
+source_file="res://Assets/cajas-cosas/Caja.png"
+dest_files=["res://.godot/imported/Caja.png-85323040c7d31cc581d1ff7ab33ebe19.ctex"]
 
 [params]
 

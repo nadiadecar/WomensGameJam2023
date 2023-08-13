@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dicdh73k045ud"]
 
-[ext_resource type="Texture2D" uid="uid://dwf2rhalbgbfw" path="res://Assets/Petalo solo.png" id="1_4dpdy"]
+[ext_resource type="Texture2D" uid="uid://dwf2rhalbgbfw" path="res://Assets/margaritas-celular/Petalo solo.png" id="1_4dpdy"]
 [ext_resource type="Script" path="res://Scripts/petalo.gd" id="1_tajrh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmndo"]

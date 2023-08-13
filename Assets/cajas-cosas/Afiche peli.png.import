@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb72lg8xcicwo"
-path="res://.godot/imported/Celular.png-408633fd85c30372468340cb47bd9783.ctex"
+uid="uid://dklx052qrdywv"
+path="res://.godot/imported/Afiche peli.png-c1a70d6ed5c1ede5d59e4dfea3d06729.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Celular.png"
-dest_files=["res://.godot/imported/Celular.png-408633fd85c30372468340cb47bd9783.ctex"]
+source_file="res://Assets/cajas-cosas/Afiche peli.png"
+dest_files=["res://.godot/imported/Afiche peli.png-c1a70d6ed5c1ede5d59e4dfea3d06729.ctex"]
 
 [params]
 

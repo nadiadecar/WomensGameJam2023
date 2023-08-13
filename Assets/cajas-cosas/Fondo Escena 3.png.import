@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpcyltfuixrtu"
-path="res://.godot/imported/Fondo Escena 2.png-921b56769b8c274fb7f3efc623716cae.ctex"
+uid="uid://dck32aqcscple"
+path="res://.godot/imported/Fondo Escena 3.png-0d045d0574488c02ca6a47b7aa95a2c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fondo Escena 2.png"
-dest_files=["res://.godot/imported/Fondo Escena 2.png-921b56769b8c274fb7f3efc623716cae.ctex"]
+source_file="res://Assets/cajas-cosas/Fondo Escena 3.png"
+dest_files=["res://.godot/imported/Fondo Escena 3.png-0d045d0574488c02ca6a47b7aa95a2c9.ctex"]
 
 [params]
 

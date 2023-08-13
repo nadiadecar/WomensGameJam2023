@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3krl5r62nyx7"]
+
+[ext_resource type="Texture2D" uid="uid://biaw6640mbci1" path="res://Assets/cajas-cosas/Baquetas bateria.png" id="1_1rll1"]
+[ext_resource type="Script" path="res://Scripts/objetos-cajas.gd" id="1_45sd8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwk4j"]
+size = Vector2(33.2283, 340.125)
+
+[node name="baquetas" type="Node2D"]
+script = ExtResource("1_45sd8")
+
+[node name="BaquetasBateria" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_1rll1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 0.785398
+shape = SubResource("RectangleShape2D_hwk4j")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

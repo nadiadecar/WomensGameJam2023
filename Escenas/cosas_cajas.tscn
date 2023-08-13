@@ -1,0 +1,50 @@
+[gd_scene load_steps=11 format=3 uid="uid://frro8w5pvbh4"]
+
+[ext_resource type="Texture2D" uid="uid://dck32aqcscple" path="res://Assets/cajas-cosas/Fondo Escena 3.png" id="1_0s5t4"]
+[ext_resource type="Script" path="res://Scripts/cosas_cajas_escena.gd" id="1_pkemu"]
+[ext_resource type="PackedScene" uid="uid://db35o1uhxnw3h" path="res://Escenas/drop_zone_cajas.tscn" id="3_3ivpr"]
+[ext_resource type="PackedScene" uid="uid://cbobtrx8b88ug" path="res://Escenas/objetos-cajas/caja_vacia.tscn" id="4_gl4ou"]
+[ext_resource type="PackedScene" uid="uid://b2iv5fqgjqqvt" path="res://Escenas/objetos-cajas/acuarelas.tscn" id="4_grcwr"]
+[ext_resource type="PackedScene" uid="uid://cltud731uypp0" path="res://Escenas/objetos-cajas/afiche.tscn" id="5_a7buk"]
+[ext_resource type="PackedScene" uid="uid://c3krl5r62nyx7" path="res://Escenas/objetos-cajas/baquetas.tscn" id="6_5yudl"]
+[ext_resource type="PackedScene" uid="uid://cb4cpsao4gpoe" path="res://Escenas/objetos-cajas/libros.tscn" id="7_15j5q"]
+[ext_resource type="PackedScene" uid="uid://ecgfw7g0xh4j" path="res://Escenas/objetos-cajas/planta.tscn" id="8_nedrg"]
+[ext_resource type="PackedScene" uid="uid://bxospbnl0m664" path="res://Escenas/objetos-cajas/totoro.tscn" id="9_arntd"]
+
+[node name="cosas_cajas" type="Node2D"]
+scale = Vector2(1.01389, 1)
+script = ExtResource("1_pkemu")
+
+[node name="FondoEscena3" type="Sprite2D" parent="."]
+position = Vector2(948, 540)
+texture = ExtResource("1_0s5t4")
+
+[node name="ZonaCajaJade" parent="." groups=["jade"] instance=ExtResource("3_3ivpr")]
+position = Vector2(616.438, 378)
+
+[node name="ZonaCajaNoa" parent="." groups=["noa"] instance=ExtResource("3_3ivpr")]
+position = Vector2(1279.89, 378)
+
+[node name="CajaNoa" parent="." groups=["noa"] instance=ExtResource("4_gl4ou")]
+position = Vector2(1280.22, 379)
+
+[node name="CajaJade" parent="." groups=["jade"] instance=ExtResource("4_gl4ou")]
+position = Vector2(619.397, 380)
+
+[node name="acuarelas" parent="." groups=["noa", "noa_objetos"] instance=ExtResource("4_grcwr")]
+position = Vector2(1725.04, 574)
+
+[node name="afiche" parent="." groups=["noa", "noa_objetos"] instance=ExtResource("5_a7buk")]
+position = Vector2(1224.98, 856)
+
+[node name="baquetas" parent="." groups=["jade", "jade_objetos"] instance=ExtResource("6_5yudl")]
+position = Vector2(206.137, 695)
+
+[node name="libros" parent="." groups=["jade", "jade_objetos"] instance=ExtResource("7_15j5q")]
+position = Vector2(141.041, 451)
+
+[node name="planta" parent="." groups=["noa", "noa_objetos"] instance=ExtResource("8_nedrg")]
+position = Vector2(1712.22, 216)
+
+[node name="totoro" parent="." groups=["jade", "jade_objetos"] instance=ExtResource("9_arntd")]
+position = Vector2(163.726, 181)

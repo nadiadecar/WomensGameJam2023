@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bg3m8he3bo8pw"]
 
-[ext_resource type="Texture2D" uid="uid://cpcyltfuixrtu" path="res://Assets/Fondo Escena 2.png" id="1_s4etf"]
+[ext_resource type="Texture2D" uid="uid://cpcyltfuixrtu" path="res://Assets/margaritas-celular/Fondo Escena 2.png" id="1_s4etf"]
 [ext_resource type="PackedScene" uid="uid://khioykstqlgd" path="res://Escenas/celular.tscn" id="2_eodpg"]
-[ext_resource type="Texture2D" uid="uid://dx7n08ks5k3ov" path="res://Assets/Margarita sin petalos.png" id="3_1c5ra"]
+[ext_resource type="Texture2D" uid="uid://dx7n08ks5k3ov" path="res://Assets/margaritas-celular/Margarita sin petalos.png" id="3_1c5ra"]
 [ext_resource type="PackedScene" uid="uid://dicdh73k045ud" path="res://Escenas/petalo.tscn" id="4_6eb1b"]
 
 [node name="margarita_celular" type="Node2D"]

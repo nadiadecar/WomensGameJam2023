@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb4cpsao4gpoe"]
+
+[ext_resource type="Texture2D" uid="uid://ood0hias3i2k" path="res://Assets/cajas-cosas/Libros.png" id="1_qaqxv"]
+[ext_resource type="Script" path="res://Scripts/objetos-cajas.gd" id="1_ubhos"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oy1b7"]
+size = Vector2(166, 95)
+
+[node name="libros" type="Node2D"]
+script = ExtResource("1_ubhos")
+
+[node name="Libros" type="Sprite2D" parent="."]
+position = Vector2(-2, -3)
+texture = ExtResource("1_qaqxv")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_oy1b7")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

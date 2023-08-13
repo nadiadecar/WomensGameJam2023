@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx7n08ks5k3ov"
-path="res://.godot/imported/Margarita sin petalos.png-585f7471d6fa020068592514a2713c83.ctex"
+uid="uid://bb72lg8xcicwo"
+path="res://.godot/imported/Celular.png-71abfe515e54d560b55a5d7fac7e2b05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Margarita sin petalos.png"
-dest_files=["res://.godot/imported/Margarita sin petalos.png-585f7471d6fa020068592514a2713c83.ctex"]
+source_file="res://Assets/margaritas-celular/Celular.png"
+dest_files=["res://.godot/imported/Celular.png-71abfe515e54d560b55a5d7fac7e2b05.ctex"]
 
 [params]
 
