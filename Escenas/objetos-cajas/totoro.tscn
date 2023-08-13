@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxospbnl0m664"]
 
-[ext_resource type="Script" path="res://Scripts/objetos-cajas.gd" id="1_223pj"]
+[ext_resource type="Script" path="res://Scripts/objetos-cajas/totoro.gd" id="1_cawxx"]
 [ext_resource type="Texture2D" uid="uid://d0l88afs7p8br" path="res://Assets/cajas-cosas/Peluche Tortoro.png" id="2_b60gh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q6gbd"]
@@ -8,7 +8,7 @@ radius = 106.0
 height = 212.0
 
 [node name="totoro" type="Node2D"]
-script = ExtResource("1_223pj")
+script = ExtResource("1_cawxx")
 
 [node name="PelucheTortoro" type="Sprite2D" parent="."]
 position = Vector2(-7, -30)

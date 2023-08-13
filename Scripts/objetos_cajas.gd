@@ -22,7 +22,6 @@ func _physics_process(delta):
 		global_position = lerp(global_position, punto_soltado, 10*delta)
 	
 	if abs(global_position - punto_soltado) < Vector2(1,1) and objeto_en_caja: 
-		print("alo?")
 		emit_signal("en_caja", self)
 
 func _input(event):

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ecgfw7g0xh4j"]
 
-[ext_resource type="Script" path="res://Scripts/objetos-cajas.gd" id="1_8k84r"]
+[ext_resource type="Script" path="res://Scripts/objetos-cajas/planta.gd" id="1_81tf4"]
 [ext_resource type="Texture2D" uid="uid://bydr6ryyj1nlg" path="res://Assets/cajas-cosas/Planta.png" id="2_jaj3s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6bpm6"]
@@ -8,7 +8,7 @@ radius = 56.0
 height = 178.0
 
 [node name="planta" type="Node2D"]
-script = ExtResource("1_8k84r")
+script = ExtResource("1_81tf4")
 
 [node name="Planta" type="Sprite2D" parent="."]
 position = Vector2(24, -24)

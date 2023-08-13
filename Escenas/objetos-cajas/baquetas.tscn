@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3krl5r62nyx7"]
 
 [ext_resource type="Texture2D" uid="uid://biaw6640mbci1" path="res://Assets/cajas-cosas/Baquetas bateria.png" id="1_1rll1"]
-[ext_resource type="Script" path="res://Scripts/objetos-cajas.gd" id="1_45sd8"]
+[ext_resource type="Script" path="res://Scripts/objetos-cajas/baquetas.gd" id="1_sq40q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwk4j"]
 size = Vector2(33.2283, 340.125)
 
 [node name="baquetas" type="Node2D"]
-script = ExtResource("1_45sd8")
+script = ExtResource("1_sq40q")
 
 [node name="BaquetasBateria" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)

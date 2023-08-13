@@ -19,7 +19,7 @@ func _physics_process(delta):
 	pass
 
 func objeto_en_caja_funcion(objeto): 
-	print("se ve la señal")
+	print(objeto.tipo)
 	objeto.queue_free()
 	cambiar_colores()
 

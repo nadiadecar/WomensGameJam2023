@@ -32,19 +32,25 @@ position = Vector2(1280.22, 379)
 position = Vector2(619.397, 380)
 
 [node name="acuarelas" parent="." groups=["noa", "noa_objetos"] instance=ExtResource("4_grcwr")]
-position = Vector2(1725.04, 574)
+position = Vector2(1725.04, 521)
+metadata/tipo = "acuarelas"
 
 [node name="afiche" parent="." groups=["noa", "noa_objetos"] instance=ExtResource("5_a7buk")]
 position = Vector2(1224.98, 856)
+metadata/tipo = "afiche"
 
 [node name="baquetas" parent="." groups=["jade", "jade_objetos"] instance=ExtResource("6_5yudl")]
 position = Vector2(206.137, 695)
+metadata/tipo = "baquetas"
 
 [node name="libros" parent="." groups=["jade", "jade_objetos"] instance=ExtResource("7_15j5q")]
 position = Vector2(141.041, 451)
+metadata/tipo = "libros"
 
 [node name="planta" parent="." groups=["noa", "noa_objetos"] instance=ExtResource("8_nedrg")]
 position = Vector2(1712.22, 216)
+metadata/tipo = "planta"
 
 [node name="totoro" parent="." groups=["jade", "jade_objetos"] instance=ExtResource("9_arntd")]
 position = Vector2(163.726, 181)
+metadata/tipo = "totoro"

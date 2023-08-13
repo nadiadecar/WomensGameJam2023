@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2iv5fqgjqqvt"]
 
 [ext_resource type="Texture2D" uid="uid://pkb8l3nm2qvi" path="res://Assets/cajas-cosas/Acuarelas.png" id="1_kqdnu"]
-[ext_resource type="Script" path="res://Scripts/objetos-cajas.gd" id="1_ll8a7"]
+[ext_resource type="Script" path="res://Scripts/objetos-cajas/acuarelas.gd" id="1_parmg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cfwm"]
 size = Vector2(207.779, 147.732)
 
 [node name="acuarelas" type="Node2D"]
-script = ExtResource("1_ll8a7")
+script = ExtResource("1_parmg")
 
 [node name="Acuarelas" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
