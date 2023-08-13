@@ -43,4 +43,5 @@ func no_seleccionable():
 	modulate = Color.WEB_GRAY
 
 func seleccionable():
+	no_seleccionar = false
 	modulate = Color.WHITE
