@@ -2,7 +2,8 @@ extends Marker2D
 
 func _draw():
 	var puntos = PackedVector2Array()
-	puntos = [Vector2(200,-140), Vector2(110,5), Vector2(-10,150), Vector2(-170,-20)]
+	puntos = [Vector2(200,-150), Vector2(100,-5), Vector2(-35,130), Vector2(-180,-30)]
 	var color = PackedColorArray()
 	color = [Color.TRANSPARENT]
+#	color = [Color.WHITE]
 	draw_polygon(puntos, color)

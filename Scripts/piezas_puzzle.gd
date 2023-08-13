@@ -27,7 +27,6 @@ func _input(event):
 			for child in espacios: 
 				var distancia = global_position.distance_to(child.global_position)
 				if distancia < minima_distancia:
-					child.seleccionado()
 					punto_soltado = child.global_position
 					minima_distancia = distancia
 				
