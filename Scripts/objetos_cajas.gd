@@ -3,6 +3,7 @@ extends Node2D
 var seleccionado = false
 var espacios
 var objeto_en_caja = false
+var no_seleccionar = false
 
 @onready var punto_soltado = global_position
 
@@ -12,7 +13,7 @@ func _ready():
 	espacios = get_tree().get_nodes_in_group("zonas")
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_just_pressed("click") and not no_seleccionar:
 		seleccionado = true
 
 func _physics_process(delta):
@@ -38,6 +39,7 @@ func _input(event):
 
 
 func no_seleccionable():
+	no_seleccionar = true
 	modulate = Color.WEB_GRAY
 
 func seleccionable():

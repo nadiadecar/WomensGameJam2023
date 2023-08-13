@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fqyu6ydubqv3"
-path="res://.godot/imported/ArribaIzquierda.png-52473c32c4dbe7435991e356802a89e4.ctex"
+uid="uid://bfohengig0k4v"
+path="res://.godot/imported/Entrada rota.png-c8b4874c5c2ca0dbdbb7a3ab464d61a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ArribaIzquierda.png"
-dest_files=["res://.godot/imported/ArribaIzquierda.png-52473c32c4dbe7435991e356802a89e4.ctex"]
+source_file="res://Assets/puzzle-entrada/Entrada rota.png"
+dest_files=["res://.godot/imported/Entrada rota.png-c8b4874c5c2ca0dbdbb7a3ab464d61a1.ctex"]
 
 [params]
 

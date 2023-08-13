@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7vpsi75ts6hg"]
+
+[ext_resource type="Texture2D" uid="uid://baupfdw4lsm7n" path="res://Assets/puzzle-entrada/6.png" id="1_bwmuc"]
+
+[node name="entrada_6" type="Node2D"]
+scale = Vector2(1.00231, 1.01015)
+
+[node name="6" type="Sprite2D" parent="."]
+texture = ExtResource("1_bwmuc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(0.700047, 0.938993)
+polygon = PackedVector2Array(14.2518, -61.1475, 54.1567, 34.7908, -52.7315, 65.3646)

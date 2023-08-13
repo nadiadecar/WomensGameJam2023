@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://frro8w5pvbh4"]
+[gd_scene load_steps=12 format=3 uid="uid://frro8w5pvbh4"]
 
 [ext_resource type="Texture2D" uid="uid://dck32aqcscple" path="res://Assets/cajas-cosas/Fondo Escena 3.png" id="1_0s5t4"]
 [ext_resource type="Script" path="res://Scripts/cosas_cajas_escena.gd" id="1_pkemu"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cb4cpsao4gpoe" path="res://Escenas/objetos-cajas/libros.tscn" id="7_15j5q"]
 [ext_resource type="PackedScene" uid="uid://ecgfw7g0xh4j" path="res://Escenas/objetos-cajas/planta.tscn" id="8_nedrg"]
 [ext_resource type="PackedScene" uid="uid://bxospbnl0m664" path="res://Escenas/objetos-cajas/totoro.tscn" id="9_arntd"]
+[ext_resource type="Theme" uid="uid://corxenjhid5p0" path="res://Assets/general.tres" id="11_bxx4o"]
 
 [node name="cosas_cajas" type="Node2D"]
 scale = Vector2(1.01389, 1)
@@ -36,7 +37,7 @@ position = Vector2(1725.04, 521)
 metadata/tipo = "acuarelas"
 
 [node name="afiche" parent="." groups=["noa", "noa_objetos"] instance=ExtResource("5_a7buk")]
-position = Vector2(1224.98, 856)
+position = Vector2(1110.57, 831)
 metadata/tipo = "afiche"
 
 [node name="baquetas" parent="." groups=["jade", "jade_objetos"] instance=ExtResource("6_5yudl")]
@@ -54,3 +55,25 @@ metadata/tipo = "planta"
 [node name="totoro" parent="." groups=["jade", "jade_objetos"] instance=ExtResource("9_arntd")]
 position = Vector2(163.726, 181)
 metadata/tipo = "totoro"
+
+[node name="TextoJade" type="Label" parent="."]
+offset_left = 200.0
+offset_top = 750.0
+offset_right = 810.0
+offset_bottom = 1019.0
+size_flags_horizontal = 4
+theme = ExtResource("11_bxx4o")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextoNoa" type="Label" parent="."]
+offset_left = 1250.0
+offset_top = 750.0
+offset_right = 1860.0
+offset_bottom = 1019.0
+size_flags_horizontal = 4
+theme = ExtResource("11_bxx4o")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

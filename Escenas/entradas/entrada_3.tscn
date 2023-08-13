@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnj3c5m7jt8d2"]
+
+[ext_resource type="Texture2D" uid="uid://c4ar5l0g1sqnm" path="res://Assets/puzzle-entrada/3.png" id="1_nge6l"]
+
+[node name="entrada_3" type="Node2D"]
+
+[node name="3" type="Sprite2D" parent="."]
+texture = ExtResource("1_nge6l")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-126, -55, -31, -84, 115, 74, 42, 42, -32, 60, -134, 13)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqrk0lv7a4na0"
-path="res://.godot/imported/AbajoIzquierda.png-c7400c1c8dbc7ed7b0d9d40198fb0dd4.ctex"
+uid="uid://c676fp0ulhg38"
+path="res://.godot/imported/1.png-ea9a6049e06e8ae268235189761045ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/AbajoIzquierda.png"
-dest_files=["res://.godot/imported/AbajoIzquierda.png-c7400c1c8dbc7ed7b0d9d40198fb0dd4.ctex"]
+source_file="res://Assets/puzzle-entrada/1.png"
+dest_files=["res://.godot/imported/1.png-ea9a6049e06e8ae268235189761045ba.ctex"]
 
 [params]
 

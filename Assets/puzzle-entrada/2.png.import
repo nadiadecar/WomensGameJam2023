@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3o7pj7h7eaif"
-path="res://.godot/imported/ArribaDerecha.png-b319ae735b994f172b086ab3c08ce356.ctex"
+uid="uid://dvogkstesin68"
+path="res://.godot/imported/2.png-2ff58ebf36df0e0ad3c0a867264a08da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ArribaDerecha.png"
-dest_files=["res://.godot/imported/ArribaDerecha.png-b319ae735b994f172b086ab3c08ce356.ctex"]
+source_file="res://Assets/puzzle-entrada/2.png"
+dest_files=["res://.godot/imported/2.png-2ff58ebf36df0e0ad3c0a867264a08da.ctex"]
 
 [params]
 

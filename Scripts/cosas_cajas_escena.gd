@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var texto_noa = $TextoNoa
+@onready var texto_jade = $TextoJade
 @onready var jade = get_tree().get_nodes_in_group("jade")
 @onready var noa = get_tree().get_nodes_in_group("noa")
 @onready var jade_objetos = get_tree().get_nodes_in_group("jade_objetos")
@@ -7,6 +9,13 @@ extends Node2D
 
 var turnos = {"jade": "noa", "noa": "jade"}
 var turno = 'jade'
+
+const dialogos = {"totoro": ["Fija que se lleva su peluche de Totoro. Nunca duerme sin él.", "noa"], \
+			"afiche": ["Si lleva su poster de Star Wars va a descascarar las paredes.", "jade"], \
+			"libros" : ["Ojalá llegue pronto la biblioteca que pedimos para esos libros porque sino va a hacer berrinches.", "noa"],\
+			"acuarelas" : ["Espero que tenga cuidado para no manchar todo con las acuarelas.", "jade"], \
+			"baquetas" : ["No sé dónde va a meter la batería. Y espero que no nos de problema con los vecinos.", "noa"],\
+			"planta" : ["Si lleva las plantas que tenga cuidado para regarlas porque deja hecho un enchastre", "jade"]}
 
 func _ready():
 	for child in jade_objetos: 
@@ -19,7 +28,13 @@ func _physics_process(delta):
 	pass
 
 func objeto_en_caja_funcion(objeto): 
-	print(objeto.tipo)
+	var datos_dialogo = dialogos[objeto.tipo]
+	if datos_dialogo[1] == 'noa':
+		texto_jade.text = ""
+		texto_noa.text = datos_dialogo[0]
+	if datos_dialogo[1] == 'jade':
+		texto_noa.text = ""
+		texto_jade.text = datos_dialogo[0]
 	objeto.queue_free()
 	cambiar_colores()
 
