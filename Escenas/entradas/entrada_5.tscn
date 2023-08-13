@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://x7qblsv51frf"]
 
 [ext_resource type="Texture2D" uid="uid://c7a0yrbrt11ck" path="res://Assets/puzzle-entrada/5.png" id="1_5w3qx"]
-[ext_resource type="Script" path="res://Scripts/piezas_puzzle.gd" id="1_y2b1i"]
+[ext_resource type="Script" path="res://Scripts/entrada/entrada_5.gd" id="1_cyq40"]
 
 [node name="entrada_5" type="Node2D"]
-script = ExtResource("1_y2b1i")
+script = ExtResource("1_cyq40")
 
 [node name="5" type="Sprite2D" parent="."]
 texture = ExtResource("1_5w3qx")

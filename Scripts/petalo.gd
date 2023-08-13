@@ -14,7 +14,7 @@ func _physics_process(delta):
 	if seleccionado: 
 		global_position = lerp(global_position, get_global_mouse_position(), 25*delta )
 	if cae:
-		global_position = lerp(global_position, Vector2(global_position.x, 900), 10*delta)
+		global_position = lerp(global_position, Vector2(global_position.x, 900), 3*delta)
 
 func _input(event):
 	if event is InputEventMouseButton:

@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://edvuqkvaoxsm"]
+[gd_scene load_steps=18 format=3 uid="uid://edvuqkvaoxsm"]
 
+[ext_resource type="Script" path="res://Scripts/entrada/escena_entradas.gd" id="1_8h802"]
 [ext_resource type="Texture2D" uid="uid://c8en05ge8mna3" path="res://Assets/puzzle-entrada/Fondo Escena 1.png" id="1_aaefl"]
 [ext_resource type="Texture2D" uid="uid://bfohengig0k4v" path="res://Assets/puzzle-entrada/Entrada rota.png" id="2_xsco2"]
 [ext_resource type="PackedScene" uid="uid://c7c0i3dtna8a1" path="res://Escenas/drop_zone_entradas.tscn" id="3_vesj8"]
@@ -14,36 +15,33 @@
 [ext_resource type="PackedScene" uid="uid://dnj3c5m7jt8d2" path="res://Escenas/entradas/entrada_3.tscn" id="12_lh6op"]
 [ext_resource type="PackedScene" uid="uid://dry5b82d42yg1" path="res://Escenas/entradas/entrada_4.tscn" id="13_slrsq"]
 [ext_resource type="PackedScene" uid="uid://x7qblsv51frf" path="res://Escenas/entradas/entrada_5.tscn" id="14_4m1mp"]
+[ext_resource type="PackedScene" uid="uid://drmuklynhek0c" path="res://Escenas/entradas/dialogo_entrada.tscn" id="16_5i3af"]
+[ext_resource type="Theme" uid="uid://corxenjhid5p0" path="res://Assets/general.tres" id="17_58phh"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(3, 0)
+script = ExtResource("1_8h802")
 
 [node name="FondoEscena1" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 texture = ExtResource("1_aaefl")
 
-[node name="EntradaRota" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(483, 535)
-texture = ExtResource("2_xsco2")
-
-[node name="DropZoneE1" parent="." instance=ExtResource("3_vesj8")]
+[node name="DropZoneE1" parent="." groups=["pedazo_1"] instance=ExtResource("3_vesj8")]
 position = Vector2(201, 584)
 script = ExtResource("4_et6jh")
 
-[node name="DropZoneE2" parent="." instance=ExtResource("3_vesj8")]
+[node name="DropZoneE2" parent="." groups=["pedazo_2"] instance=ExtResource("3_vesj8")]
 position = Vector2(423, 641)
 script = ExtResource("5_20fd2")
 
-[node name="DropZoneE3" parent="." instance=ExtResource("3_vesj8")]
+[node name="DropZoneE3" parent="." groups=["pedazo_3"] instance=ExtResource("3_vesj8")]
 position = Vector2(414, 501)
 script = ExtResource("6_74qo7")
 
-[node name="DropZoneE4" parent="." instance=ExtResource("3_vesj8")]
+[node name="DropZoneE4" parent="." groups=["pedazo_4"] instance=ExtResource("3_vesj8")]
 position = Vector2(579, 445)
 script = ExtResource("7_4vygl")
 
-[node name="DropZoneE5" parent="." instance=ExtResource("3_vesj8")]
+[node name="DropZoneE5" parent="." groups=["pedazo_5"] instance=ExtResource("3_vesj8")]
 position = Vector2(684, 477)
 script = ExtResource("8_1umq6")
 
@@ -51,17 +49,40 @@ script = ExtResource("8_1umq6")
 position = Vector2(808, 535)
 texture = ExtResource("9_jvfwv")
 
-[node name="Node2D" parent="." instance=ExtResource("10_qaepv")]
+[node name="Node2D" parent="." groups=["pedazo_1", "pedazo_entrada"] instance=ExtResource("10_qaepv")]
 position = Vector2(432, 825)
 
-[node name="Node2D2" parent="." instance=ExtResource("11_3xvkn")]
+[node name="Node2D2" parent="." groups=["pedazo_2", "pedazo_entrada"] instance=ExtResource("11_3xvkn")]
 position = Vector2(881, 223)
 
-[node name="entrada_3" parent="." instance=ExtResource("12_lh6op")]
+[node name="entrada_3" parent="." groups=["pedazo_3", "pedazo_entrada"] instance=ExtResource("12_lh6op")]
 position = Vector2(242, 162)
 
-[node name="entrada_4" parent="." instance=ExtResource("13_slrsq")]
+[node name="entrada_4" parent="." groups=["pedazo_4", "pedazo_entrada"] instance=ExtResource("13_slrsq")]
 position = Vector2(747, 897)
 
-[node name="entrada_5" parent="." instance=ExtResource("14_4m1mp")]
+[node name="entrada_5" parent="." groups=["pedazo_5", "pedazo_entrada"] instance=ExtResource("14_4m1mp")]
 position = Vector2(178, 888)
+
+[node name="EntradaRota" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(483, 535)
+texture = ExtResource("2_xsco2")
+
+[node name="dialogo-entrada" parent="." instance=ExtResource("16_5i3af")]
+offset_left = 902.5
+offset_top = 18.0
+offset_right = 902.5
+offset_bottom = 18.0
+
+[node name="continuar" type="Button" parent="."]
+visible = false
+offset_left = 1393.0
+offset_top = 971.0
+offset_right = 1672.0
+offset_bottom = 1031.0
+theme = ExtResource("17_58phh")
+disabled = true
+text = "  CONTINUAR  "
+
+[connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]

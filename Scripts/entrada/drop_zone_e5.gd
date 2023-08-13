@@ -1,5 +1,7 @@
 extends Marker2D
 
+var entrada = 5
+
 func _draw():
 	var puntos = PackedVector2Array()
 	puntos = [Vector2(140,-10), Vector2(90,130), Vector2(-30,150), Vector2(-140,100), Vector2(90,-180)]
