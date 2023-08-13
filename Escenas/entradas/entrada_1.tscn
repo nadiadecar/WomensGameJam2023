@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://prrvd66h4ske"]
 
-[ext_resource type="Script" path="res://Scripts/piezas_puzzle.gd" id="1_bxtng"]
-[ext_resource type="Texture2D" uid="uid://c676fp0ulhg38" path="res://Assets/puzzle-entrada/1.png" id="2_t76kg"]
+[ext_resource type="Script" path="res://Scripts/piezas_puzzle.gd" id="1_pe4ph"]
+[ext_resource type="Texture2D" uid="uid://c676fp0ulhg38" path="res://Assets/puzzle-entrada/1.png" id="2_eift3"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_bxtng")
+script = ExtResource("1_pe4ph")
 
 [node name="1" type="Sprite2D" parent="."]
-texture = ExtResource("2_t76kg")
+texture = ExtResource("2_eift3")
 
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(0.675676, 0.75)

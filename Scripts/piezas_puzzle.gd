@@ -2,7 +2,7 @@ extends Node2D
 
 var seleccionado = false
 var espacios
-var punto_soltado = Vector2(100,100)
+@onready var punto_soltado = global_position
 
 func _ready(): 
 	espacios = get_tree().get_nodes_in_group("zonas")

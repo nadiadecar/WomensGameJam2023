@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c7c0i3dtna8a1"]
+
+[node name="DropZone" type="Marker2D" groups=["zonas"]]

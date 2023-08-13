@@ -1,9 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://edvuqkvaoxsm"]
+[gd_scene load_steps=15 format=3 uid="uid://edvuqkvaoxsm"]
 
 [ext_resource type="Texture2D" uid="uid://c8en05ge8mna3" path="res://Assets/puzzle-entrada/Fondo Escena 1.png" id="1_aaefl"]
+[ext_resource type="Texture2D" uid="uid://bfohengig0k4v" path="res://Assets/puzzle-entrada/Entrada rota.png" id="2_xsco2"]
+[ext_resource type="PackedScene" uid="uid://c7c0i3dtna8a1" path="res://Escenas/drop_zone_entradas.tscn" id="3_vesj8"]
+[ext_resource type="Script" path="res://Scripts/entrada/drop_zone_e1.gd" id="4_et6jh"]
+[ext_resource type="Script" path="res://Scripts/entrada/drop_zone_e2.gd" id="5_20fd2"]
+[ext_resource type="Script" path="res://Scripts/entrada/drop_zone_e3.gd" id="6_74qo7"]
+[ext_resource type="Script" path="res://Scripts/entrada/drop_zone_e4.gd" id="7_4vygl"]
+[ext_resource type="Script" path="res://Scripts/entrada/drop_zone_e5.gd" id="8_1umq6"]
+[ext_resource type="Texture2D" uid="uid://baupfdw4lsm7n" path="res://Assets/puzzle-entrada/6.png" id="9_jvfwv"]
+[ext_resource type="PackedScene" uid="uid://prrvd66h4ske" path="res://Escenas/entradas/entrada_1.tscn" id="10_qaepv"]
+[ext_resource type="PackedScene" uid="uid://bbx2r0q8pyq8a" path="res://Escenas/entradas/entrada_2.tscn" id="11_3xvkn"]
+[ext_resource type="PackedScene" uid="uid://dnj3c5m7jt8d2" path="res://Escenas/entradas/entrada_3.tscn" id="12_lh6op"]
+[ext_resource type="PackedScene" uid="uid://dry5b82d42yg1" path="res://Escenas/entradas/entrada_4.tscn" id="13_slrsq"]
+[ext_resource type="PackedScene" uid="uid://x7qblsv51frf" path="res://Escenas/entradas/entrada_5.tscn" id="14_4m1mp"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(3, 0)
 
 [node name="FondoEscena1" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 texture = ExtResource("1_aaefl")
+
+[node name="EntradaRota" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(483, 535)
+texture = ExtResource("2_xsco2")
+
+[node name="DropZoneE1" parent="." instance=ExtResource("3_vesj8")]
+position = Vector2(195, 547)
+script = ExtResource("4_et6jh")
+
+[node name="DropZoneE2" parent="." instance=ExtResource("3_vesj8")]
+position = Vector2(375, 642)
+script = ExtResource("5_20fd2")
+
+[node name="DropZoneE3" parent="." instance=ExtResource("3_vesj8")]
+position = Vector2(377, 488)
+script = ExtResource("6_74qo7")
+
+[node name="DropZoneE4" parent="." instance=ExtResource("3_vesj8")]
+position = Vector2(566, 439)
+script = ExtResource("7_4vygl")
+
+[node name="DropZoneE5" parent="." instance=ExtResource("3_vesj8")]
+position = Vector2(724, 502)
+script = ExtResource("8_1umq6")
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(808, 535)
+texture = ExtResource("9_jvfwv")
+
+[node name="Node2D" parent="." instance=ExtResource("10_qaepv")]
+position = Vector2(432, 825)
+
+[node name="Node2D2" parent="." instance=ExtResource("11_3xvkn")]
+position = Vector2(881, 223)
+
+[node name="entrada_3" parent="." instance=ExtResource("12_lh6op")]
+position = Vector2(242, 162)
+
+[node name="entrada_4" parent="." instance=ExtResource("13_slrsq")]
+position = Vector2(747, 897)
+
+[node name="entrada_5" parent="." instance=ExtResource("14_4m1mp")]
+position = Vector2(178, 888)
