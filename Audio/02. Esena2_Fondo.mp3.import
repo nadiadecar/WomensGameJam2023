@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2a1pf6o8txjh"
+path="res://.godot/imported/02. Esena2_Fondo.mp3-430c00b3a75374279283b2cc208a43ce.mp3str"
+
+[deps]
+
+source_file="res://Audio/02. Esena2_Fondo.mp3"
+dest_files=["res://.godot/imported/02. Esena2_Fondo.mp3-430c00b3a75374279283b2cc208a43ce.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

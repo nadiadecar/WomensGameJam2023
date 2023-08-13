@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://corxenjhid5p0"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://corxenjhid5p0"]
 
 [ext_resource type="FontFile" uid="uid://b46rcttvctv75" path="res://Assets/SukuriburuBySoultyRagevin-Regular.otf" id="1_b38po"]
 
@@ -17,11 +17,19 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 corner_detail = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gd5is"]
+bg_color = Color(0.4, 0.266667, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
 [resource]
 Button/font_sizes/font_size = 45
 Button/fonts/font = ExtResource("1_b38po")
 Button/styles/hover = SubResource("StyleBoxFlat_d7ibn")
 Button/styles/normal = SubResource("StyleBoxFlat_82ots")
+Button/styles/pressed = SubResource("StyleBoxFlat_gd5is")
 Label/colors/font_color = Color(0.152941, 0.152941, 0.152941, 1)
 Label/font_sizes/font_size = 50
 Label/fonts/font = ExtResource("1_b38po")

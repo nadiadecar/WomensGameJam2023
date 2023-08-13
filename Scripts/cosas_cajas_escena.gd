@@ -10,6 +10,8 @@ extends Node2D
 @onready var burbuja_noa = $BurbujaNoa
 @onready var timer = $Timer
 @onready var continuar = $continuar
+@onready var audio_fondo = $audio_fondo
+@onready var click = $click
 
 var turnos = {"jade": "noa", "noa": "jade"}
 var turno = 'jade'
@@ -23,11 +25,14 @@ const dialogos = {"totoro": ["Fija que se lleva su peluche de Totoro. Nunca duer
 			"planta" : ["Si lleva las plantas que tenga cuidado para regarlas porque deja hecho un enchastre", "jade"]}
 
 func _ready():
+	audio_fondo.play()
 	timer.timeout.connect(continuar_juego)
 	for child in jade_objetos: 
 		child.en_caja.connect(objeto_en_caja_funcion)
+		child.clickeado.connect(clickear)
 	for child in noa_objetos: 
 		child.en_caja.connect(objeto_en_caja_funcion)
+		child.clickeado.connect(clickear)
 	cambiar_colores()
 
 func _physics_process(delta):
@@ -88,6 +93,10 @@ func continuar_juego():
 	texto_noa.text = ""
 	continuar.visible = true
 	continuar.disabled = false
+	
+func clickear():
+	click.play()
 
 func _on_continuar_pressed():
+	clickear()
 	get_tree().change_scene_to_file("res://Escenas/creditos.tscn")

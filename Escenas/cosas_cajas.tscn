@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://frro8w5pvbh4"]
+[gd_scene load_steps=16 format=3 uid="uid://frro8w5pvbh4"]
 
 [ext_resource type="Texture2D" uid="uid://dck32aqcscple" path="res://Assets/cajas-cosas/Fondo Escena 3.png" id="1_0s5t4"]
 [ext_resource type="Script" path="res://Scripts/cosas_cajas_escena.gd" id="1_pkemu"]
@@ -13,9 +13,11 @@
 [ext_resource type="Theme" uid="uid://corxenjhid5p0" path="res://Assets/general.tres" id="11_bxx4o"]
 [ext_resource type="Texture2D" uid="uid://c0rdqpj2ey1sa" path="res://Assets/burbujas-dialogo/1 rosa grande.png" id="12_pretm"]
 [ext_resource type="Texture2D" uid="uid://cafg0sp4c3vey" path="res://Assets/burbujas-dialogo/1 verde grande.png" id="13_y10y5"]
+[ext_resource type="AudioStream" uid="uid://ctwpeeq4by0de" path="res://Audio/03. Esena3_.mp3" id="14_h4pcd"]
+[ext_resource type="AudioStream" uid="uid://bvktnyufhrxqn" path="res://Audio/SFX/click-button-140881.mp3" id="15_oqmw4"]
 
 [node name="cosas_cajas" type="Node2D"]
-scale = Vector2(1.01389, 1)
+scale = Vector2(0.673603, 0.664375)
 script = ExtResource("1_pkemu")
 
 [node name="FondoEscena3" type="Sprite2D" parent="."]
@@ -83,6 +85,7 @@ theme = ExtResource("11_bxx4o")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="TextoNoa" type="Label" parent="."]
 offset_left = 1255.0
@@ -94,17 +97,27 @@ theme = ExtResource("11_bxx4o")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="continuar" type="Button" parent="."]
 visible = false
-offset_left = 810.739
-offset_top = 853.0
-offset_right = 1089.74
-offset_bottom = 913.0
+offset_left = 810.0
+offset_top = 855.0
+offset_right = 1089.0
+offset_bottom = 915.0
 theme = ExtResource("11_bxx4o")
 disabled = true
 text = "  CONTINUAR  "
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="audio_fondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_h4pcd")
+volume_db = -30.0
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_oqmw4")
+volume_db = -30.0
 
 [connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]

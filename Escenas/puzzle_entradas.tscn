@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://edvuqkvaoxsm"]
+[gd_scene load_steps=21 format=3 uid="uid://edvuqkvaoxsm"]
 
 [ext_resource type="Script" path="res://Scripts/entrada/escena_entradas.gd" id="1_8h802"]
 [ext_resource type="Texture2D" uid="uid://c8en05ge8mna3" path="res://Assets/puzzle-entrada/Fondo Escena 1.png" id="1_aaefl"]
@@ -18,8 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://drmuklynhek0c" path="res://Escenas/entradas/dialogo_entrada.tscn" id="16_5i3af"]
 [ext_resource type="Theme" uid="uid://corxenjhid5p0" path="res://Assets/general.tres" id="17_58phh"]
 [ext_resource type="Script" path="res://Escenas/Timer.gd" id="18_xh46r"]
+[ext_resource type="AudioStream" uid="uid://bjwljvs24dswj" path="res://Audio/01. Esena1_.mp3" id="19_ap85r"]
+[ext_resource type="AudioStream" uid="uid://bvktnyufhrxqn" path="res://Audio/SFX/click-button-140881.mp3" id="20_okagl"]
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2(0.666399, 0.666399)
 script = ExtResource("1_8h802")
 
 [node name="FondoEscena1" type="Sprite2D" parent="."]
@@ -59,11 +62,12 @@ position = Vector2(881, 223)
 [node name="entrada_3" parent="." groups=["pedazo_3", "pedazo_entrada"] instance=ExtResource("12_lh6op")]
 position = Vector2(242, 162)
 
-[node name="entrada_4" parent="." groups=["pedazo_4", "pedazo_entrada"] instance=ExtResource("13_slrsq")]
-position = Vector2(747, 897)
-
 [node name="entrada_5" parent="." groups=["pedazo_5", "pedazo_entrada"] instance=ExtResource("14_4m1mp")]
 position = Vector2(178, 888)
+
+[node name="entrada_4" parent="." groups=["pedazo_4", "pedazo_entrada"] instance=ExtResource("13_slrsq")]
+position = Vector2(747, 897)
+scale = Vector2(1, 1)
 
 [node name="EntradaRota" type="Sprite2D" parent="."]
 visible = false
@@ -75,18 +79,31 @@ offset_left = 902.5
 offset_top = 18.0
 offset_right = 902.5
 offset_bottom = 18.0
+metadata/_edit_use_anchors_ = true
 
 [node name="continuar" type="Button" parent="."]
 visible = false
-offset_left = 854.0
-offset_top = 896.0
-offset_right = 1133.0
-offset_bottom = 956.0
+offset_left = 810.0
+offset_top = 855.0
+offset_right = 1089.0
+offset_bottom = 915.0
 theme = ExtResource("17_58phh")
 disabled = true
 text = "  CONTINUAR  "
 
 [node name="Timer" type="Timer" parent="."]
 script = ExtResource("18_xh46r")
+
+[node name="Fondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_ap85r")
+volume_db = -30.0
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 0
+stream = ExtResource("20_okagl")
+volume_db = -30.0
 
 [connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]

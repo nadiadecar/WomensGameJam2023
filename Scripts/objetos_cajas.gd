@@ -8,6 +8,7 @@ var no_seleccionar = false
 @onready var punto_soltado = global_position
 
 signal en_caja
+signal clickeado
 
 func _ready(): 
 	espacios = get_tree().get_nodes_in_group("zonas")
@@ -15,6 +16,7 @@ func _ready():
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click") and not no_seleccionar:
 		seleccionado = true
+		emit_signal("clickeado")
 
 func _physics_process(delta):
 	if seleccionado: 

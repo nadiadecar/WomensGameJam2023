@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://b74pwkeumms5a"]
+[gd_scene load_steps=9 format=3 uid="uid://b74pwkeumms5a"]
 
 [ext_resource type="Texture2D" uid="uid://ocxle2tahyql" path="res://Assets/carteles/Inicio-Penca.jpg" id="1_fg0gn"]
 [ext_resource type="Script" path="res://Scripts/menu_inicio.gd" id="1_xj775"]
 [ext_resource type="Theme" uid="uid://b10eb7ntl3qwe" path="res://Assets/botones-menus.tres" id="2_lqu31"]
 [ext_resource type="Theme" uid="uid://bl3t0ohcay44f" path="res://Assets/boton-redondo-menui.tres" id="3_rbqex"]
+[ext_resource type="AudioStream" uid="uid://hp5vor2w0pml" path="res://Audio/Menu_Fondo_.mp3" id="5_bjrct"]
+[ext_resource type="AudioStream" uid="uid://bvktnyufhrxqn" path="res://Audio/SFX/click-button-140881.mp3" id="6_3fh1p"]
+[ext_resource type="FontFile" uid="uid://b46rcttvctv75" path="res://Assets/SukuriburuBySoultyRagevin-Regular.otf" id="7_dsmmo"]
+
+[sub_resource type="Theme" id="Theme_0jvij"]
+Label/colors/font_color = Color(0.901961, 0.662745, 0.847059, 1)
+Label/font_sizes/font_size = 230
+Label/fonts/font = ExtResource("7_dsmmo")
 
 [node name="MenuInicio" type="Control"]
 layout_mode = 3
@@ -12,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.661611, 0.661611)
 script = ExtResource("1_xj775")
 
 [node name="Inicio-penca" type="Sprite2D" parent="."]
@@ -42,6 +51,31 @@ offset_top = 700.0
 offset_right = 1125.0
 offset_bottom = 750.0
 theme = ExtResource("2_lqu31")
+
+[node name="audio_fondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_bjrct")
+volume_db = -25.0
+autoplay = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3fh1p")
+volume_db = -30.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 352.17
+offset_top = 148.123
+offset_right = 1626.17
+offset_bottom = 440.123
+theme = SubResource("Theme_0jvij")
+text = "Nuestra Historia"
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = 6.04581
+offset_right = 1280.05
+offset_bottom = 292.0
+theme = SubResource("Theme_0jvij")
+text = "Nuestra Historia"
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]

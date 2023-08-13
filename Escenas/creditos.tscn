@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2p1evbonnct"]
+[gd_scene load_steps=7 format=3 uid="uid://d2p1evbonnct"]
 
-[ext_resource type="Texture2D" uid="uid://bwwh7dv3wnckf" path="res://Assets/carteles/Creditos.png" id="1_mx533"]
+[ext_resource type="Script" path="res://Scripts/creditos.gd" id="1_4ncbb"]
+[ext_resource type="Texture2D" uid="uid://xyg8qwkpx7t4" path="res://Assets/carteles/Creditos-Reales.png" id="1_yi6xc"]
+[ext_resource type="Texture2D" uid="uid://dntcu373ry10t" path="res://Assets/carteles/Cerrar.png" id="2_x51xy"]
+[ext_resource type="Theme" uid="uid://cebxmpmpmebfe" path="res://Assets/boton-redondo-genearl.tres" id="3_a62t5"]
+[ext_resource type="Texture2D" uid="uid://b5spt6ua3r2bd" path="res://Assets/carteles/Asset 9.png" id="5_3y880"]
+[ext_resource type="AudioStream" uid="uid://hp5vor2w0pml" path="res://Audio/Menu_Fondo_.mp3" id="6_nhvev"]
 
 [node name="creditos" type="Control"]
 layout_mode = 3
@@ -9,7 +14,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4ncbb")
 
-[node name="Creditos" type="Sprite2D" parent="."]
-position = Vector2(963, 528)
-texture = ExtResource("1_mx533")
+[node name="Creditos-reales" type="Sprite2D" parent="."]
+position = Vector2(645.335, 355.25)
+scale = Vector2(0.688011, 0.688011)
+texture = ExtResource("1_yi6xc")
+
+[node name="Cerrar" type="Sprite2D" parent="."]
+position = Vector2(1234, 43)
+scale = Vector2(0.377028, 0.377028)
+texture = ExtResource("2_x51xy")
+
+[node name="Button" type="Button" parent="Cerrar"]
+offset_left = -93.0
+offset_top = -93.0
+offset_right = 93.0
+offset_bottom = 90.0
+theme = ExtResource("3_a62t5")
+
+[node name="Volver" type="Sprite2D" parent="."]
+position = Vector2(44, 43)
+scale = Vector2(-0.377, 0.377)
+texture = ExtResource("5_3y880")
+
+[node name="volver" type="Button" parent="Volver"]
+offset_left = -93.0
+offset_top = -93.0
+offset_right = 93.0
+offset_bottom = 90.0
+theme = ExtResource("3_a62t5")
+
+[node name="audio_fondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_nhvev")
+volume_db = -30.0
+
+[connection signal="pressed" from="Cerrar/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Volver/volver" to="." method="_on_volver_pressed"]

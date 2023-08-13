@@ -5,13 +5,17 @@ extends Node2D
 @onready var continuar = $continuar
 @onready var dialogo_entrada = $"dialogo-entrada"
 @onready var timer = $Timer
+@onready var fondo = $Fondo
+@onready var click = $click
 
 var pedazos_bien_puestos = 0
 
 func _ready():
+	fondo.play()
 	timer.timeout.connect(siguiente_nivel)
 	for entrada in pedazos: 
 		entrada.lugar_correcto.connect(contador)
+		entrada.clickeado.connect(clickear)
 
 func contador(entrada):
 	pedazos_bien_puestos += 1
@@ -24,9 +28,12 @@ func contador(entrada):
 		
 
 func _on_continuar_pressed():
+	click.play()
 	get_tree().change_scene_to_file("res://Escenas/margarita_celular.tscn")
 	
 func siguiente_nivel():
 	continuar.disabled = false
 	continuar.visible = true
 
+func clickear():
+	click.play()
