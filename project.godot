@@ -20,6 +20,13 @@ config/icon="res://Assets/puzzle-entrada/4.png"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[filesystem]
+
+import/blender/enabled.android=true
+import/blender/enabled.web=true
+import/fbx/enabled.android=true
+import/fbx/enabled.web=true
+
 [input]
 
 click={
@@ -30,4 +37,5 @@ click={
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true

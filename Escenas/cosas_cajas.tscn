@@ -113,11 +113,13 @@ text = "  CONTINUAR  "
 
 [node name="audio_fondo" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_h4pcd")
-volume_db = -30.0
+volume_db = -20.0
 autoplay = true
 
 [node name="click" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_oqmw4")
-volume_db = -30.0
+volume_db = -20.0
+
+[node name="eliminar_dialogo" type="Timer" parent="."]
 
 [connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]

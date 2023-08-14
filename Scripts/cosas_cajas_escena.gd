@@ -12,6 +12,7 @@ extends Node2D
 @onready var continuar = $continuar
 @onready var audio_fondo = $audio_fondo
 @onready var click = $click
+@onready var eliminar_dialogo = $eliminar_dialogo
 
 var turnos = {"jade": "noa", "noa": "jade"}
 var turno = 'jade'
@@ -27,6 +28,7 @@ const dialogos = {"totoro": ["Fija que se lleva su peluche de Totoro. Nunca duer
 func _ready():
 	audio_fondo.play()
 	timer.timeout.connect(continuar_juego)
+	eliminar_dialogo.timeout.connect(eliminar_dialogo_funcion)
 	for child in jade_objetos: 
 		child.en_caja.connect(objeto_en_caja_funcion)
 		child.clickeado.connect(clickear)
@@ -75,7 +77,8 @@ func cambiar_colores():
 			if not child.is_in_group('zonas'):
 				child.seleccionable()
 	if cant_objetos == 6: 
-		timer.start(1.5)
+		timer.start(2)
+		eliminar_dialogo.start(8)
 		
 
 func continuar_juego():
@@ -87,13 +90,16 @@ func continuar_juego():
 	for child in noa: 
 		if not child.is_in_group('zonas'):
 			child.no_seleccionable()
+	continuar.visible = true
+	continuar.disabled = false
+
+func eliminar_dialogo_funcion():
 	burbuja_jade.visible = false
 	burbuja_noa.visible = false
 	texto_jade.text = ""
 	texto_noa.text = ""
-	continuar.visible = true
-	continuar.disabled = false
-	
+
+
 func clickear():
 	click.play()
 

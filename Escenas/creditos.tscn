@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2p1evbonnct"]
+[gd_scene load_steps=8 format=3 uid="uid://d2p1evbonnct"]
 
 [ext_resource type="Script" path="res://Scripts/creditos.gd" id="1_4ncbb"]
 [ext_resource type="Texture2D" uid="uid://xyg8qwkpx7t4" path="res://Assets/carteles/Creditos-Reales.png" id="1_yi6xc"]
+[ext_resource type="Texture2D" uid="uid://bri8gtbvpbjv5" path="res://Assets/carteles/CreditosFinales.png" id="2_enw1x"]
 [ext_resource type="Texture2D" uid="uid://dntcu373ry10t" path="res://Assets/carteles/Cerrar.png" id="2_x51xy"]
 [ext_resource type="Theme" uid="uid://cebxmpmpmebfe" path="res://Assets/boton-redondo-genearl.tres" id="3_a62t5"]
 [ext_resource type="Texture2D" uid="uid://b5spt6ua3r2bd" path="res://Assets/carteles/Asset 9.png" id="5_3y880"]
@@ -16,9 +17,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4ncbb")
 
+[node name="CreditosFinales" type="Sprite2D" parent="."]
+position = Vector2(638.633, 358.125)
+scale = Vector2(0.678837, 0.678837)
+texture = ExtResource("2_enw1x")
+
 [node name="Creditos-reales" type="Sprite2D" parent="."]
-position = Vector2(645.335, 355.25)
-scale = Vector2(0.688011, 0.688011)
+position = Vector2(1033, -529)
+rotation = 0.994838
+scale = Vector2(0.64836, 0.673479)
 texture = ExtResource("1_yi6xc")
 
 [node name="Cerrar" type="Sprite2D" parent="."]
@@ -47,7 +54,7 @@ theme = ExtResource("3_a62t5")
 
 [node name="audio_fondo" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_nhvev")
-volume_db = -30.0
+volume_db = -15.0
 
 [connection signal="pressed" from="Cerrar/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Volver/volver" to="." method="_on_volver_pressed"]

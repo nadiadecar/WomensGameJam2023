@@ -31,12 +31,11 @@ func _input(event):
 			var minima_distancia = 75
 			for child in espacios: 
 				var distancia = global_position.distance_to(child.global_position)
-				if distancia < minima_distancia:
+				if distancia < minima_distancia and child.entrada == self.entrada:
 					punto_soltado = child.global_position
 					minima_distancia = distancia
 					print(child.entrada, self.entrada)
-					if child.entrada == self.entrada: 
-						no_seleccionable()
+					no_seleccionable()
 			
 
 func no_seleccionable():
